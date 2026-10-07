@@ -9,6 +9,9 @@ value, count = np.loadtxt(
     dtype=float,
     unpack=True)
 
-plt.plot(value, count)
-
+plt.bar(value, count, width=1, align="edge")
+plt.title("Histogram of the 'clown' sample image")
+plt.xlabel("pixle colour [as 8-bit value]")
+plt.ylabel("pixle count")
 plt.savefig("Histogram.png", dpi=300)
+plt.show()
